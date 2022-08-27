@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* не розумію для чого це!!! */
+  /* задае точні розміри для верстки в СSS */
 }
 
 :root {
@@ -70,6 +70,12 @@ body .list {
     height: auto;
 }
 /* контейнер */
+
+.page-header{
+   
+}
+
+
 .container {
     width: 1200px;
     padding-right: 15px;
@@ -82,10 +88,8 @@ body .list {
 
 /* логотип шапки */
 .logo {
-    padding-bottom: 24px;
-    padding-top: 24px;
+    margin-right:93px;
     display: inline-block;
-
     color: var(--logo-color);
     text-decoration: none;
     font-family: Raleway, sans-serif;
@@ -94,6 +98,7 @@ body .list {
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: var(--primary-letter-spacing);
+
 }
 
 .logo span {
@@ -103,7 +108,6 @@ body .list {
 /* логотип футера */
 .logo-footer {
     color: var(--accent-color-white);
-
     display: flex;
     margin-bottom: 20px;
 }
@@ -113,29 +117,44 @@ body .list {
 }
 
 /* шапка */
+.nav{
+    display: flex;
+}
 .nav-position {
     display: flex;
-    text-align: center;
+    align-items: center;
+    height: 80px;
 }
 
+.nav-group{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 32px;
+}
 
 .list-nav {
     display: flex;
-    margin-left: 93px;
+    align-items: center;
+    gap: 32px;
+}
+
+.link{
+    display: block;
 }
 
 .list-nav .item:not(:last-child) {
-    margin-right: 50px;
+    
 }
 
 .list-nav .link {
     color: var(--primary-text-color);
 }
 
+
 .list-auth {
     display: flex;
     margin-left: auto;
-    margin-top: 32px;
 }
 
 
@@ -144,18 +163,12 @@ body .list {
 }
 
 .list-auth .link {
-    padding-bottom: 32px;
-    padding-top: 32px;
     display: inline-block;
-
     color: var(--secondary-text-color);
 }
 
 .nav .link {
-    padding-bottom: 32px;
-    padding-top: 32px;
     display: inline-block;
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
