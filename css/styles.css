@@ -1,6 +1,7 @@
-*,
-*::before,
-*::after {
+
+/*Додае вміст(стилі) до та після елемента до якого були застосовані*/
+::before,
+::after {
   box-sizing: border-box;
   /* задае точні розміри для верстки в СSS */
 }
@@ -119,11 +120,11 @@ body .list {
 /* шапка */
 .nav{
     display: flex;
+    align-items: center;
 }
 .nav-position {
     display: flex;
     align-items: center;
-    height: 80px;
 }
 
 .nav-group{
@@ -136,7 +137,7 @@ body .list {
 .list-nav {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 50px;
 }
 
 .link{
@@ -165,6 +166,8 @@ body .list {
 .list-auth .link {
     display: inline-block;
     color: var(--secondary-text-color);
+    padding-bottom: 32px;
+    padding-top: 32px;
 }
 
 .nav .link {
@@ -173,6 +176,8 @@ body .list {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: var(--secondary-letter-spacing);
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 /* for example */
@@ -207,8 +212,10 @@ body .list {
     line-height: 1.36;
     letter-spacing: var(--hero-letter-spacing);
     text-transform: uppercase;
-
     margin-bottom: 30px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-button {
@@ -245,7 +252,7 @@ body .list {
     border: 0;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
-    margin: 1px;
+    margin: -1px;
 }
 
 .section-title {
@@ -269,7 +276,7 @@ body .list {
 
 .features-list {
     display: flex;
-    min-width: 270px;
+    
 }
 
 .features-list .item:not(:last-child) {
